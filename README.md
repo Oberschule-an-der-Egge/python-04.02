@@ -8,54 +8,65 @@ Diese Übung basiert auf den Übungen https://github.com/Oberschule-an-der-Egge/
 Um in Python mit einer Datei arbeiten zu können, ist es notwendig den vollständigen Dateipfand als String vorliegen zu haben. Wie man den Dateipfad Betriebssystemunabhängig auslesen aknn, wurde in https://github.com/Oberschule-an-der-Egge/python-04.01 erläutert.
 
 
+##Daten einlesen:
 
-
-##Dateien mit Inhalt erstellen.
-
-
-
-Um Dateien zu schreiben nehmen wir `open()` und den Kontextmanager `with .. as ..:`
+Um den Inhalt einer Datei einzulesen verwenden wir die Methode  wir `open()` und den Kontextmanager `with .. as ..:`
 
 ```python
-with open(dateipfad, "w") as datei_out:
-    datei_out.write("Beliebiger String")
-    
-    # text -> ['Zeile eins\n', 'Zeile zwei\n', ...]
+with open(file_path, "r") as file_in:  # Default for open() is option 'r'/read
+    data = file_in.read()
+
 ```
 
-Beachten Sie, dass die Methode `open` zwei Argumente fordert: Zum einen den Dateipfad als string; zum anderen das Argument `"w"`.
+Dieses mal verwenden wir als zweites Argument für open `"r"` also "read". Theoretisch, könnte man dieses Argument sogar weglassen und open nur das Argument file_path als String übergeben. Grunfd hierfür ist, dass open "r" als Standartargument eingestellt hat und, erhält die Methode kein zweites Argument, annimt, dass "r" gemeint ist.
 
 
 ##Probieren Sie es aus!
 
-Versuchen Sie zunächst eine Textdatei mit beliebiegen Inhalt zu erstellen. Welchen Unterschied macht es, wenn Sie bei `open` statt des Arguments `"w"` das Argument `a` verwenden?
+Erstellen Sie eine Textdatei mit beliebiegen Inhalt. Versuchen Sie den Inhalt einzulesen und sich via `print` ausgeben zu lassen.
 
 
-##Wenden Sie das erlernte an!
+##Eine Liste einlesen
 
-Versuchen Sie nun die in https://github.com/Oberschule-an-der-Egge/python-04 erstellte ToDo-Liste wie folgt zu erweitern:
+Probieren Sie nun eine beliebige Liste einzulesen.
 
-![image](Todo_Liste_Persistenz.png)
+Listen haben in Python immer das Format
+`['Element 1', 'Element 2', 'Element 3', ..., 'Element n']`
 
-Nach dem beenden des Beispielprogramms sollte eine Textdatei entstanden sein, die wie folgenden Inhalt hat.:
+Legen Sie also eine beliebige Liste nach obigem Format in Ihrer Textdatei ab und lesen Sie sie ein.
 
-![image](Todo-Datei.png)
-
-#Achtung: `datei_out.write` fordert als Argument einen String. Sollten Sie eine Liste Speichen wollen, müssen Sie diese erst umwandeln.
+Um einen String, der oben gezeigtes Format aufweist in eine Liste umzuwandeln können Sie die methode `eval()` verwenden. Als Argument verlangt eval einen String mit Listeneigenschaften.
 
 
-##Vorbereitung für die nächste Übung
+Folgendes könnte helfen:
 
-Um die Datei laden zu können, ist es sinnvoll die Listeneinträge einzeln untereinander in Ihrer Ausgabedatei zu speichern. Dies gelingt am einfachsten mittels einer Schleife.
--> Wandeln Sie Ihren Quellcode so ab, dass ihre `Todo.txt` nicht dies:
 
-`['Milch', 'Eier', 'Käse']`
-
-sondern dies enthält:
+```python
+liste = eval(data)
+print(liste)
 
 ```
-Milch
-Eier
-Käse
+
+
+## Bonusaufgabe
+
+Am Ende von https://github.com/Oberschule-an-der-Egge/python-04.01 sollten Sie den Quellcode so editieren, dass Ihre Liste in die Ausgabedatei im Format
+
+```
+Element 1
+Element 2
+Element 3
+...
+Element n
 ```
 
+geschrieben wird.
+
+Versuchen Sie eine Funktion zu erstellen, die dieses Listenformat einlesen kann und die einzelnen Elemente in einer Liste in Ihrem Programm ablegt.
+
+Folgendes könnte Hilfreich sein:
+
+```python
+            for entry in file_in.readlines():
+                data.append(entry.rstrip())  # .rstrip removes the \n at the end of each line
+```     
