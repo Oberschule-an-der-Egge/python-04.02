@@ -1,26 +1,13 @@
-# Projekt 4.1: Persistente Todo-Liste
+# Projekt 4.2: Eine existierende Todo-Liste auslesen
 
-Diese Übung basiert auf der Übung https://github.com/Oberschule-an-der-Egge/python-04. Es wird empfohlen letztere Übung zunächst (inklusive der Bonusaufgabe) abzuschließen, bevor die hier vorliegende Übung angegangen wird.
-
-
+Diese Übung basiert auf den Übungen https://github.com/Oberschule-an-der-Egge/python-04 und https://github.com/Oberschule-an-der-Egge/python-04.01. Es wird empfohlen beide Übungen zu absolvieren, bevor die hier vorliegende Übung angegangen wird.
 
 
-##Problemstellung: Betriebssysteme
+##Dateien aufrufen.
+
+Um in Python mit einer Datei arbeiten zu können, ist es notwendig den vollständigen Dateipfand als String vorliegen zu haben. Wie man den Dateipfad Betriebssystemunabhängig auslesen aknn, wurde in https://github.com/Oberschule-an-der-Egge/python-04.01 erläutert.
 
 
-```
-
-**Dateien bearbeiten**
-
-Betriebssysteme (Windows, MacOS, Linux) benutzen unterschiedliche Pfadangaben. Mit der Standard-Bibliothek `os` können diese Pfade unabhängig vom Betriebssystem erstellt werden.
-
-```python
-import os
-    
-dateipfad = os.path.abspath('Neue_Textdatei.txt')
-# -> /home/tim/desktop/Neue_Textdatei.txt (Linux) oder 
-# -> C:\Users\Tim\Desktop\Neue_Textdatei.txt (Windows)
-```
 
 
 ##Dateien mit Inhalt erstellen.
