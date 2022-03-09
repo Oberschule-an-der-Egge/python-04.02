@@ -67,6 +67,6 @@ Versuchen Sie eine Funktion zu erstellen, die dieses Listenformat einlesen kann 
 Folgendes könnte Hilfreich sein:
 
 ```python
-            for entry in file_in.readlines():
-                data.append(entry.rstrip())  # .rstrip removes the \n at the end of each line
+for entry in file_in.readlines():
+    data.append(entry.rstrip())  # .rstrip removes the \n at the end of each line
 ```     
