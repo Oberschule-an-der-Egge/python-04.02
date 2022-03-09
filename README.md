@@ -18,7 +18,7 @@ with open(file_path, "r") as file_in:  # Default for open() is option 'r'/read
 
 ```
 
-Dieses mal verwenden wir als zweites Argument für open `"r"` also "read". Theoretisch, könnte man dieses Argument sogar weglassen und open nur das Argument file_path als String übergeben. Grunfd hierfür ist, dass open "r" als Standartargument eingestellt hat und, erhält die Methode kein zweites Argument, annimt, dass "r" gemeint ist.
+Dieses mal verwenden wir als zweites Argument für open `"r"` also "read". Theoretisch, könnte man dieses Argument sogar weglassen und open nur das Argument file_path als String übergeben. Grund hierfür ist, dass open "r" als Standartargument eingestellt hat und, erhält die Methode kein zweites Argument, annimt, dass `"r"` gemeint ist.
 
 
 ## Probieren Sie es aus!
