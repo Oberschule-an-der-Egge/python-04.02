@@ -3,12 +3,12 @@
 Diese Übung basiert auf den Übungen https://github.com/Oberschule-an-der-Egge/python-04 und https://github.com/Oberschule-an-der-Egge/python-04.01. Es wird empfohlen beide Übungen zu absolvieren, bevor die hier vorliegende Übung angegangen wird.
 
 
-##Dateien aufrufen.
+## Dateien aufrufen.
 
 Um in Python mit einer Datei arbeiten zu können, ist es notwendig den vollständigen Dateipfand als String vorliegen zu haben. Wie man den Dateipfad Betriebssystemunabhängig auslesen aknn, wurde in https://github.com/Oberschule-an-der-Egge/python-04.01 erläutert.
 
 
-##Daten einlesen:
+## Daten einlesen:
 
 Um den Inhalt einer Datei einzulesen verwenden wir die Methode  wir `open()` und den Kontextmanager `with .. as ..:`
 
@@ -21,12 +21,12 @@ with open(file_path, "r") as file_in:  # Default for open() is option 'r'/read
 Dieses mal verwenden wir als zweites Argument für open `"r"` also "read". Theoretisch, könnte man dieses Argument sogar weglassen und open nur das Argument file_path als String übergeben. Grunfd hierfür ist, dass open "r" als Standartargument eingestellt hat und, erhält die Methode kein zweites Argument, annimt, dass "r" gemeint ist.
 
 
-##Probieren Sie es aus!
+## Probieren Sie es aus!
 
 Erstellen Sie eine Textdatei mit beliebiegen Inhalt. Versuchen Sie den Inhalt einzulesen und sich via `print` ausgeben zu lassen.
 
 
-##Eine Liste einlesen
+## Eine Liste einlesen
 
 Probieren Sie nun eine beliebige Liste einzulesen.
 
