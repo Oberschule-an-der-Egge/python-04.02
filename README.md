@@ -3,12 +3,12 @@
 Diese Übung basiert auf den Übungen https://github.com/Oberschule-an-der-Egge/python-04 und https://github.com/Oberschule-an-der-Egge/python-04.01. Es wird empfohlen beide Übungen zu absolvieren, bevor die hier vorliegende Übung angegangen wird.
 
 
-## Dateien aufrufen.
+## Dateien aufrufen
 
 Um in Python mit einer Datei arbeiten zu können, ist es notwendig den vollständigen Dateipfand als String vorliegen zu haben. Wie man den Dateipfad Betriebssystemunabhängig auslesen aknn, wurde in https://github.com/Oberschule-an-der-Egge/python-04.01 erläutert.
 
 
-## Daten einlesen:
+## Daten einlesen
 
 Um den Inhalt einer Datei einzulesen verwenden wir die Methode  wir `open()` und den Kontextmanager `with .. as ..:`
 
